@@ -12,7 +12,7 @@ public class LocationInfo {
 	final private String BASE_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
 	
 	
-	final private String API_KEY = "key=AIzaSyCrc3-OvdWor31c42VduhC3nmsvspb4JXs";
+	final private String API_KEY = "AIzaSyCrc3-OvdWor31c42VduhC3nmsvspb4JXs";
 	
 	
 	public String getNearbyLocationDetails(String location, String radius)
