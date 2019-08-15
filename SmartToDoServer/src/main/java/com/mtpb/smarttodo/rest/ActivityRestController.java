@@ -86,9 +86,9 @@ public class ActivityRestController {
 		String response = location.getNearbyLocationDetails(currLocation, LOCATION_RADIUS);
 		if(response != null)
 		{
-			JSONParser parser = new JSONParser(response);
-			try {
-				JSONObject json = (JSONObject) parser.parse();
+			//JSONParser parser = new JSONParser(response);
+			//try {
+				JSONObject json = new JSONObject(response);
 				List<ActivityList> activities = activityRepository.findActivityByUser(userName);
 				if(activities.size() != 0)
 				{
@@ -103,10 +103,10 @@ public class ActivityRestController {
 						notification.sendNotifications(n);
 					}
 				}
-			} catch (ParseException e) {
+		//	} catch (ParseException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		//		e.printStackTrace();
+		//	}
 		}
 		return ResponseEntity.status(HttpStatus.OK).build();
 		
